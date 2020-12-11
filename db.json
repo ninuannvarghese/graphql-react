@@ -1,0 +1,12 @@
+{
+  "users":[
+    {"id":"1","firstName":"Sid", "age":"3","companyId":1},
+    {"id":"2","firstName":"Sandhra", "age":"6","companyId":2},
+    {"id":"3","firstName":"Neethu", "age":"27","companyId":2}
+  ],
+   "companies":[
+     {"id":"1","name":"Apple","description":"Iphone"},
+     {"id":"2","name":"Google","description":"Seacrh"}
+   ]
+}
+
