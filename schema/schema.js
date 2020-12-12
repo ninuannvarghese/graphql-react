@@ -22,7 +22,15 @@ const UserType = new GraphQLObjectType({
     id: { type: GraphQLInt },
     firstName: { type: GraphQLString },
     age: { type: GraphQLInt },
-    company: { type: CompanyType }
+    company: {
+      type: CompanyType,
+      resolve(parentValue, args) {
+        //console.log(parentValue.companyId, args);
+        return axios
+          .get(`http://localhost:3000/companies/${parentValue.companyId}`)
+          .then(res => res.data);
+      }
+    }
   }
 });
 // returns the usertype when queried with the ID
