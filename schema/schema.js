@@ -6,13 +6,23 @@ const { GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLSchema } = graphql;
   { id: "1", firstName: "Sid", age: 3 },
   { id: "2", firstName: "Sandhra", age: 6 }
 ];*/
+//Shema for Company
+const CompanyType = new GraphQLObjectType({
+  name: "Company",
+  fields: {
+    id: { type: GraphQLString },
+    name: { type: GraphQLString },
+    description: { type: GraphQLString }
+  }
+});
 //Schema for users
 const UserType = new GraphQLObjectType({
   name: "User",
   fields: {
     id: { type: GraphQLInt },
     firstName: { type: GraphQLString },
-    age: { type: GraphQLInt }
+    age: { type: GraphQLInt },
+    company: { type: CompanyType }
   }
 });
 // returns the usertype when queried with the ID
