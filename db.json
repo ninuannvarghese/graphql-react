@@ -6,7 +6,7 @@
   ],
    "companies":[
      {"id":"1","name":"Apple","description":"Iphone"},
-     {"id":"2","name":"Google","description":"Seacrh"}
+     {"id":"2","name":"Google","description":"Search Engine"}
    ]
 }
 
